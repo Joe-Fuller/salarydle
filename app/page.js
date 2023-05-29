@@ -1,12 +1,14 @@
+import InfoBox from "@/components/infoBox";
+
 export default function Home() {
   return (
     <main>
       <h1>Salarydle</h1>
       <h2>Guess the Salary</h2>
-      <p>Job Title</p>
-      <p>Location</p>
-      <p>Description</p>
-      <p>Benefits</p>
+      <InfoBox>Job Title</InfoBox>
+      <InfoBox>Location</InfoBox>
+      <InfoBox>Description</InfoBox>
+      <InfoBox>Benefits</InfoBox>
     </main>
   );
 }
