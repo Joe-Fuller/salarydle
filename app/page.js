@@ -1,8 +1,11 @@
+"use client";
+
 import InfoBox from "@/components/infoBox";
 import GuessBox from "@/components/guessBox";
+import { useState } from "react";
 
 export default function Home() {
-  const guesses = [1000, 3000, 5000];
+  const [guesses, setGuesses] = useState([1000, 3000, 5000]);
 
   return (
     <main className="space-y-10">
@@ -28,7 +31,7 @@ export default function Home() {
           hidden={guesses.length < 3}
         ></InfoBox>
       </div>
-      <GuessBox guesses={guesses}></GuessBox>
+      <GuessBox guesses={guesses} setGuesses={setGuesses}></GuessBox>
     </main>
   );
 }

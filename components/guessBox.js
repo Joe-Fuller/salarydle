@@ -2,15 +2,19 @@
 
 import { useRouter } from "next/navigation";
 
-export default function GuessBox({ guesses }) {
+export default function GuessBox({ guesses, setGuesses }) {
   const router = useRouter();
 
   const handleGuess = (event) => {
     event.preventDefault();
 
+    const newGuess = parseInt(event.target.elements.guess.value);
+
     guesses.push(parseInt(event.target.elements.guess.value));
 
-    console.log(guesses);
+    const newGuesses = guesses + newGuess;
+
+    console.log(guesses, newGuesses);
 
     router.refresh();
   };
