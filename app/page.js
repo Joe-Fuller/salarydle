@@ -2,17 +2,21 @@ import InfoBox from "@/components/infoBox";
 
 export default function Home() {
   return (
-    <main>
-      <div className="grid justify-center">
+    <main className="space-y-10">
+      <div className="grid justify-center text-center text-3xl">
         <h1>Salarydle</h1>
-        <h2>Guess the Salary</h2>
+        <h2>Guess the Salary!</h2>
       </div>
-      <div className="grid justify-center">
+      <div className="grid justify-center text-xl space-y-4">
         <InfoBox title="Job Title"></InfoBox>
         <InfoBox title="Location"></InfoBox>
         <InfoBox title="Description"></InfoBox>
         <InfoBox title="Benefits"></InfoBox>
       </div>
+      <form className="grid justify-center bg-indigo-500 text-black">
+        <label htmlFor="guess">Salary</label>
+        <input type="number" id="guess" name="guess"></input>
+      </form>
     </main>
   );
 }
