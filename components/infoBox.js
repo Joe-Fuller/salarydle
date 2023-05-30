@@ -1,5 +1,7 @@
-import styles from "./infobox.module.css";
-
-export default function InfoBox({ children }) {
-  return <div className={styles.container}>{children}</div>;
+export default function InfoBox(info) {
+  return (
+    <div>
+      <h3>{info.title}</h3>
+    </div>
+  );
 }
