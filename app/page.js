@@ -2,15 +2,17 @@ import InfoBox from "@/components/infoBox";
 
 export default function Home() {
   return (
-    <main className="flex justify-center h-screen">
-      <div>
+    <main>
+      <div className="grid justify-center">
         <h1>Salarydle</h1>
         <h2>Guess the Salary</h2>
       </div>
-      <InfoBox title="Job Title"></InfoBox>
-      <InfoBox title="Location"></InfoBox>
-      <InfoBox title="Description"></InfoBox>
-      <InfoBox title="Benefits"></InfoBox>
+      <div className="grid justify-center">
+        <InfoBox title="Job Title"></InfoBox>
+        <InfoBox title="Location"></InfoBox>
+        <InfoBox title="Description"></InfoBox>
+        <InfoBox title="Benefits"></InfoBox>
+      </div>
     </main>
   );
 }
