@@ -8,12 +8,24 @@ export default function Home() {
         <h2>Guess the Salary!</h2>
       </div>
       <div className="grid justify-center text-xl space-y-4">
-        <InfoBox title="Job Title"></InfoBox>
-        <InfoBox title="Location"></InfoBox>
-        <InfoBox title="Description"></InfoBox>
-        <InfoBox title="Benefits"></InfoBox>
+        <InfoBox
+          title="Job Title"
+          text="Software Developer"
+          hidden={false}
+        ></InfoBox>
+        <InfoBox title="Location" text="Liverpool, UK" hidden={false}></InfoBox>
+        <InfoBox
+          title="Description"
+          text="long long description, maybe an entire sentence, maybe yet somehow more"
+          hidden={false}
+        ></InfoBox>
+        <InfoBox
+          title="Benefits"
+          text="likely a bulletpointed list"
+          hidden={true}
+        ></InfoBox>
       </div>
-      <form className="grid justify-center bg-indigo-500 text-black">
+      <form className="grid justify-center bg-indigo-500 text-black ">
         <label htmlFor="guess">Salary</label>
         <input type="number" id="guess" name="guess"></input>
       </form>
