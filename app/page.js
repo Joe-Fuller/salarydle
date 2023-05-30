@@ -1,6 +1,9 @@
 import InfoBox from "@/components/infoBox";
+import GuessBox from "@/components/guessBox";
 
 export default function Home() {
+  const guesses = [1000, 3000, 5000];
+
   return (
     <main className="space-y-10">
       <div className="grid justify-center text-center text-3xl">
@@ -8,27 +11,24 @@ export default function Home() {
         <h2>Guess the Salary!</h2>
       </div>
       <div className="grid justify-center text-xl space-y-4">
+        <InfoBox title="Job Title" text="Software Developer"></InfoBox>
         <InfoBox
-          title="Job Title"
-          text="Software Developer"
-          hidden={false}
+          title="Location"
+          text="Liverpool, UK"
+          hidden={guesses.length < 1}
         ></InfoBox>
-        <InfoBox title="Location" text="Liverpool, UK" hidden={false}></InfoBox>
         <InfoBox
           title="Description"
           text="long long description, maybe an entire sentence, maybe yet somehow more"
-          hidden={false}
+          hidden={guesses.length < 2}
         ></InfoBox>
         <InfoBox
           title="Benefits"
           text="likely a bulletpointed list"
-          hidden={true}
+          hidden={guesses.length < 3}
         ></InfoBox>
       </div>
-      <form className="grid justify-center bg-indigo-500 text-black ">
-        <label htmlFor="guess">Salary</label>
-        <input type="number" id="guess" name="guess"></input>
-      </form>
+      <GuessBox guesses={guesses}></GuessBox>
     </main>
   );
 }
