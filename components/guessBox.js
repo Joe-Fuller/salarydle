@@ -1,18 +1,6 @@
 "use client";
 
 export default function GuessBox({ guesses, setGuesses, handleGuess }) {
-  //   const handleGuess = (event) => {
-  //     event.preventDefault();
-
-  //     const newGuess = parseInt(event.target.elements.guess.value);
-
-  //     const newGuesses = guesses.concat(newGuess);
-
-  //     setGuesses(newGuesses);
-
-  //     event.target.elements.guess.value = "";
-  //   };
-
   return (
     <div className="grid justify-center">
       <form
