@@ -5,7 +5,13 @@ import GuessBox from "@/components/guessBox";
 import { useState } from "react";
 
 export default function Home() {
-  const [guesses, setGuesses] = useState([1000, 3000, 5000]);
+  const [guesses, setGuesses] = useState([]);
+  const job = {
+    title: "software developer",
+    location: "liverpool",
+    description: "long long description, long as can be",
+    benefits: "somehow a bullet pointed list idk",
+  };
 
   return (
     <main className="space-y-10">
@@ -14,20 +20,20 @@ export default function Home() {
         <h2>Guess the Salary!</h2>
       </div>
       <div className="grid justify-center text-xl space-y-4">
-        <InfoBox title="Job Title" text="Software Developer"></InfoBox>
+        <InfoBox title="Job Title" text={job.title}></InfoBox>
         <InfoBox
           title="Location"
-          text="Liverpool, UK"
+          text={job.location}
           hidden={guesses.length < 1}
         ></InfoBox>
         <InfoBox
           title="Description"
-          text="long long description, maybe an entire sentence, maybe yet somehow more"
+          text={job.description}
           hidden={guesses.length < 2}
         ></InfoBox>
         <InfoBox
           title="Benefits"
-          text="likely a bulletpointed list"
+          text={job.benefits}
           hidden={guesses.length < 3}
         ></InfoBox>
       </div>
