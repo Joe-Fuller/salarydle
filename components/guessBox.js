@@ -8,7 +8,14 @@ export default function GuessBox({ guesses, setGuesses, handleGuess }) {
         onSubmit={handleGuess}
       >
         <label htmlFor="guess">Salary</label>
-        <input type="number" id="guess" name="guess"></input>
+        <input
+          type="number"
+          id="guess"
+          name="guess"
+          maxlength="7"
+          min="0"
+          max="9999999"
+        ></input>
       </form>
       <ul>
         {guesses.map((guess) => {
