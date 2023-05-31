@@ -15,6 +15,7 @@ export default function GuessBox({ guesses, setGuesses, handleGuess }) {
           maxlength="7"
           min="0"
           max="9999999"
+          autoFocus
         ></input>
       </form>
       <ul>
