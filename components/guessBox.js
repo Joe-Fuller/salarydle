@@ -25,7 +25,9 @@ export default function GuessBox({ guesses, setGuesses, handleGuess, salary }) {
           return (
             <div key={guess} className="grid grid-cols-2">
               <div>{guess}</div>
-              <div>{guess < salary[0] ? "Too low" : "Too high"}</div>
+              <div className="text-right">
+                {guess < salary[0] ? "Too low" : "Too high"}
+              </div>
             </div>
           );
         })}
