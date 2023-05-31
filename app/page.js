@@ -16,6 +16,24 @@ export default function Home() {
     salary: [22398.48, 24887.2],
   };
 
+  const handleGuess = (event) => {
+    event.preventDefault();
+
+    const newGuess = parseInt(event.target.elements.guess.value);
+
+    console.log(newGuess, job.salary[0], job.salary[1]);
+
+    if (newGuess >= job.salary[0] && newGuess <= job.salary[1]) {
+      console.log("woohoo you got it");
+    }
+
+    const newGuesses = guesses.concat(newGuess);
+
+    setGuesses(newGuesses);
+
+    event.target.elements.guess.value = "";
+  };
+
   return (
     <main className="space-y-10">
       <div className="grid justify-center text-center text-3xl">
@@ -40,7 +58,11 @@ export default function Home() {
           hidden={guesses.length < 3}
         ></InfoBox>
       </div>
-      <GuessBox guesses={guesses} setGuesses={setGuesses}></GuessBox>
+      <GuessBox
+        guesses={guesses}
+        setGuesses={setGuesses}
+        handleGuess={handleGuess}
+      ></GuessBox>
     </main>
   );
 }
