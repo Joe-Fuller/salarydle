@@ -60,6 +60,7 @@ export default function Home() {
         guesses={guesses}
         setGuesses={setGuesses}
         handleGuess={handleGuess}
+        salary={job.salary}
       ></GuessBox>
     </main>
   );

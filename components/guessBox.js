@@ -1,6 +1,6 @@
 "use client";
 
-export default function GuessBox({ guesses, setGuesses, handleGuess }) {
+export default function GuessBox({ guesses, setGuesses, handleGuess, salary }) {
   return (
     <div className="grid justify-center">
       <form
@@ -22,7 +22,8 @@ export default function GuessBox({ guesses, setGuesses, handleGuess }) {
         {guesses.map((guess) => {
           return (
             <li className="grid justify-center" key={guess}>
-              {guess}
+              <p>{guess}</p>
+              <p>{guess < salary[0] ? "Too low" : "Too high"}</p>
             </li>
           );
         })}
