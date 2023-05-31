@@ -6,7 +6,11 @@ export default function InfoBox(info) {
   ) : (
     <div className={styles.container}>
       <h3>{info.title}</h3>
-      <p>{info.text}</p>
+      <ul>
+        {info.text.split("*").map((line) => {
+          return <li>{line}</li>;
+        })}
+      </ul>
     </div>
   );
 }
