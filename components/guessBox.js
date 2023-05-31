@@ -10,11 +10,9 @@ export default function GuessBox({ guesses, setGuesses }) {
 
     const newGuess = parseInt(event.target.elements.guess.value);
 
-    guesses.push(parseInt(event.target.elements.guess.value));
+    const newGuesses = guesses.concat(newGuess);
 
-    const newGuesses = guesses + newGuess;
-
-    console.log(guesses, newGuesses);
+    setGuesses(newGuesses);
 
     router.refresh();
   };
