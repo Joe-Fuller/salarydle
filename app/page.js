@@ -7,10 +7,13 @@ import { useState } from "react";
 export default function Home() {
   const [guesses, setGuesses] = useState([]);
   const job = {
-    title: "software developer",
-    location: "liverpool",
-    description: "long long description, long as can be",
-    benefits: "somehow a bullet pointed list idk",
+    title: "Junior Web Developer",
+    location: "Liverpool",
+    description:
+      "We are looking to recruit a Junior Web Developer with knowledge and skills in Content Management including HTML, CSS and JavaScript. The role will work across multiple websites developing, designing and updating content with the role focusing a lot on the ticketing sites for the M&S Bank Arena and Ticket Quarter.",
+    benefits:
+      "- An enhanced holiday scheme, which increases with length of service   \n - An excellent local government pension scheme, where by employer contribution is currently set at 14%   \n - Access to a premium health care policy, which includes an employee assistant line, contributions towards    a wide range of medical costs, such as dental and optical and staff discounts.",
+    salary: [22398.48, 24887.2],
   };
 
   return (

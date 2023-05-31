@@ -1,10 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-
 export default function GuessBox({ guesses, setGuesses }) {
-  const router = useRouter();
-
   const handleGuess = (event) => {
     event.preventDefault();
 
