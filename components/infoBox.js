@@ -8,7 +8,7 @@ export default function InfoBox(info) {
       <h3>{info.title}</h3>
       <ul>
         {info.text.split("*").map((line) => {
-          return <li>{line}</li>;
+          return <li key={line}>{line}</li>;
         })}
       </ul>
     </div>
