@@ -13,8 +13,6 @@ export default function GuessBox({ guesses, setGuesses }) {
     const newGuesses = guesses.concat(newGuess);
 
     setGuesses(newGuesses);
-
-    router.refresh();
   };
 
   return (
