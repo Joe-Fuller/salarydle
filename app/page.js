@@ -21,8 +21,6 @@ export default function Home() {
 
     const newGuess = parseInt(event.target.elements.guess.value);
 
-    console.log(newGuess, job.salary[0], job.salary[1]);
-
     if (newGuess >= job.salary[0] && newGuess <= job.salary[1]) {
       console.log("woohoo you got it");
     }
