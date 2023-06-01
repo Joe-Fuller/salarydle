@@ -1,15 +1,24 @@
-export default function JobAd(job) {
+export default function JobAd({ job }) {
   return (
-    <div>
-      <div>Job Title</div>
+    <div className="bg-white text-black">
+      <div className="text-xl font-bold">{job.title}</div>
       <div className="grid grid-cols-2">
-        <p>Location</p>
-        <p>Company</p>
+        <p>{job.location}</p>
+        <p>{job.company}</p>
       </div>
-      <div>Description</div>
+      <div>
+        <p className="font-bold">Description</p>
+        <p>{job.description}</p>
+      </div>
       <div className="grid grid-cols-2">
-        <div>Requirements</div>
-        <div>Responsibilites</div>
+        <div>
+          <p className="font-bold">Requirements</p>
+          <p>{job.requirements}</p>
+        </div>
+        <div>
+          <p className="font-bold">Responsibilites</p>
+          <p>lalalalalalala responsbilites</p>
+        </div>
       </div>
     </div>
   );

@@ -17,6 +17,7 @@ export default function Home() {
   const job = {
     title: "Panel Beater",
     location: "Grimsby",
+    company: "Auto Professionals",
     requirements:
       "Level 2 or 3 NVQ/IMI/City & Guilds UK qualification in Panel Beating or be time served with 10+ years service within the industry. *Valid UK driving licence.",
     experience: "Vehicle Panel Beating: 5 years (preferred)",
@@ -76,7 +77,7 @@ export default function Home() {
         handleGuess={handleGuess}
         salary={job.salary}
       ></GuessBox>
-      <JobAd></JobAd>
+      <JobAd job={job}></JobAd>
     </main>
   );
 }
