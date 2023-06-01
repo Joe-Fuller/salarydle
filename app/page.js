@@ -2,6 +2,7 @@
 
 import InfoBox from "@/components/infoBox";
 import GuessBox from "@/components/guessBox";
+import JobAd from "@/components/jobAd";
 import { useState } from "react";
 
 export default function Home() {
@@ -75,6 +76,7 @@ export default function Home() {
         handleGuess={handleGuess}
         salary={job.salary}
       ></GuessBox>
+      <JobAd></JobAd>
     </main>
   );
 }
