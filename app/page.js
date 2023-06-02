@@ -1,6 +1,5 @@
 "use client";
 
-import InfoBox from "@/components/infoBox";
 import GuessBox from "@/components/guessBox";
 import JobAd from "@/components/jobAd";
 import { useState } from "react";
@@ -47,29 +46,6 @@ export default function Home() {
       <div className="grid justify-center text-center text-3xl">
         <h1>Salarydle</h1>
         <h2>Guess the Salary!</h2>
-      </div>
-      <div className="grid justify-center text-xl space-y-4">
-        <InfoBox title="Job Title" text={job.title}></InfoBox>
-        <InfoBox
-          title="Location"
-          text={job.location}
-          hidden={guesses.length < 1}
-        ></InfoBox>
-        <InfoBox
-          title="Requirements"
-          text={job.requirements}
-          hidden={guesses.length < 2}
-        ></InfoBox>
-        <InfoBox
-          title="Experience"
-          text={job.experience}
-          hidden={guesses.length < 3}
-        ></InfoBox>
-        <InfoBox
-          title="Description"
-          text={job.description}
-          hidden={guesses.length < 4}
-        ></InfoBox>
       </div>
       <GuessBox
         guesses={guesses}
