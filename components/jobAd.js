@@ -1,4 +1,4 @@
-export default function JobAd({ job }) {
+export default function JobAd({ job, guesses }) {
   return (
     <div className="bg-white text-black">
       <div className="text-xl font-bold">{job.title}</div>

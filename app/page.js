@@ -77,7 +77,7 @@ export default function Home() {
         handleGuess={handleGuess}
         salary={job.salary}
       ></GuessBox>
-      <JobAd job={job}></JobAd>
+      <JobAd job={job} guesses={guesses}></JobAd>
     </main>
   );
 }
