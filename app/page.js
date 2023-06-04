@@ -47,13 +47,13 @@ export default function Home() {
         <h1>Salarydle</h1>
         <h2>Guess the Salary!</h2>
       </div>
+      <JobAd job={job} guesses={guesses}></JobAd>
       <GuessBox
         guesses={guesses}
         setGuesses={setGuesses}
         handleGuess={handleGuess}
         salary={job.salary}
       ></GuessBox>
-      <JobAd job={job} guesses={guesses}></JobAd>
     </main>
   );
 }
