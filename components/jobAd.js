@@ -1,6 +1,6 @@
 export default function JobAd({ job, guesses }) {
   return (
-    <div className="bg-white text-black">
+    <div className="bg-white text-black p-8 rounded-md m-8">
       <div className="text-xl font-bold">{job.title}</div>
       <div className="grid grid-cols-2">
         <p className={guesses.length < 1 ? "blur-sm" : ""}>{job.location}</p>
