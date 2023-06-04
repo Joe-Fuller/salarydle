@@ -3,7 +3,7 @@
 export default function GuessBox({ guesses, setGuesses, handleGuess, salary }) {
   return (
     <div className="grid justify-center text-black">
-      <div className="bg-indigo-500 rounded-md p-1">
+      <div className="bg-orange-400 rounded-md p-1">
         <form className="grid justify-center" onSubmit={handleGuess}>
           <label className="grid justify-center" htmlFor="guess">
             Salary

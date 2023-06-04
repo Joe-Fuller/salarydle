@@ -16,9 +16,13 @@ export default function JobAd({ job, guesses }) {
         <div className="grid grid-cols-2">
           <div>
             <p className="font-bold">Requirements</p>
-            <p className={guesses.length < 4 ? "blur-sm" : ""}>
-              {job.requirements}
-            </p>
+            {job.requirements.map((requirement) => {
+              return (
+                <p className={guesses.length < 4 ? "blur-sm" : ""}>
+                  {requirement}
+                </p>
+              );
+            })}
           </div>
           <div>
             <p className="font-bold">Responsibilites</p>

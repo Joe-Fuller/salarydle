@@ -17,8 +17,10 @@ export default function Home() {
     title: "Panel Beater",
     location: "Grimsby",
     company: "Auto Professionals",
-    requirements:
-      "Level 2 or 3 NVQ/IMI/City & Guilds UK qualification in Panel Beating or be time served with 10+ years service within the industry. *Valid UK driving licence.",
+    requirements: [
+      "Level 2 or 3 NVQ/IMI/City & Guilds UK qualification in Panel Beating or be time served with 10+ years service within the industry.",
+      "Valid UK driving licence.",
+    ],
     experience: "Vehicle Panel Beating: 5 years (preferred)",
     description:
       "Are you an experienced Panel Beater looking for a new role with a fantastic growing company?",
